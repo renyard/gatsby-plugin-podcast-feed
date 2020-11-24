@@ -47,11 +47,11 @@ exports.onPostBuild = async ({ graphql }, pluginOptions) => {
     feed.item({
       guid: id,
       title,
-      url,
       description: excerpt,
       categories,
       author: feedOptions.managingEditor,
       date,
+      enclosure: {url, length: 0, type: "audio/mpeg"},
       custom_elements: [
         { 'content:encoded': html },
         { pubDate: date },
