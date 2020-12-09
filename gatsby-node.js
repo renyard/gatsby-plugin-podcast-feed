@@ -59,7 +59,7 @@ exports.onPostBuild = async ({ graphql }, pluginOptions) => {
         { 'itunes:episodeType': 'full' },
         { 'itunes:title': title },
         { 'itunes:episode': number },
-        { 'itunes:summary': excerpt },
+        { 'itunes:summary': html },
         { 'itunes:author': feedOptions.managingEditor },
         {
           'itunes:image': {
